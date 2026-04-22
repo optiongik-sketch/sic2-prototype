@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Социальный инвестиционный контракт 2.0</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -271,6 +271,167 @@
         ::-webkit-scrollbar-track { background: var(--bg-secondary); }
         ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--accent-hover); }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .cards-grid { grid-template-columns: 1fr; }
+            .full-width { grid-column: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            .app-container { flex-direction: column; }
+            
+            .sidebar {
+                width: 100%; padding: 12px 16px; position: fixed;
+                bottom: 0; left: 0; z-index: 100; border-right: none;
+                border-top: 1px solid var(--border-color);
+                box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+            }
+            
+            .logo { display: none; }
+            
+            .nav-menu {
+                display: flex; justify-content: space-around;
+                flex-direction: row; flex: none;
+            }
+            
+            .nav-item { margin-bottom: 0; }
+            
+            .nav-link {
+                flex-direction: column; gap: 4px; padding: 8px 12px;
+                font-size: 10px;
+            }
+            
+            .nav-link i { font-size: 18px; }
+            
+            .nav-link span { display: block; }
+            
+            .sidebar-footer { display: none; }
+            
+            .main-content {
+                padding: 16px; padding-bottom: 100px;
+            }
+            
+            .header {
+                flex-direction: column; gap: 16px; align-items: flex-start;
+            }
+            
+            .balance-card {
+                width: 100%; text-align: left;
+            }
+            
+            .section-title { font-size: 22px; }
+            
+            .user-details h2 { font-size: 16px; }
+            
+            .card { padding: 16px; }
+            
+            .card-header {
+                flex-direction: column; align-items: flex-start; gap: 12px;
+            }
+            
+            .card-header > div {
+                display: flex; flex-wrap: wrap; gap: 8px;
+            }
+            
+            .portfolio-chart {
+                height: 280px; padding: 15px;
+            }
+            
+            .contract-options { flex-direction: column; }
+            
+            .contract-option { padding: 15px; }
+            
+            .contract-duration { font-size: 24px; }
+            
+            .modal { padding: 20px; width: 95%; }
+            
+            .modal-title { font-size: 18px; }
+            
+            .modal-actions {
+                flex-direction: column;
+            }
+            
+            .modal-actions .btn { width: 100%; justify-content: center; }
+            
+            .onboarding-modal { padding: 24px; width: 95%; }
+            
+            .onboarding-title { font-size: 20px; }
+            
+            .onboarding-icon { width: 60px; height: 60px; font-size: 30px; }
+            
+            .onboarding-actions {
+                flex-direction: column;
+            }
+            
+            .onboarding-actions .btn { width: 100%; }
+            
+            .chart-legend { gap: 16px; }
+            
+            .legend-item { font-size: 11px; }
+            
+            .feed-item { padding: 12px; }
+            
+            .feed-avatar { width: 36px; height: 36px; font-size: 14px; }
+            
+            .challenge-card {
+                flex-direction: column; gap: 12px; text-align: center;
+            }
+            
+            .toggle-container {
+                flex-direction: column; align-items: flex-start; gap: 8px;
+            }
+            
+            .referral-box {
+                flex-direction: column;
+            }
+            
+            .referral-link { width: 100%; }
+            
+            .data-table {
+                font-size: 12px;
+            }
+            
+            .data-table th, .data-table td {
+                padding: 8px 10px;
+            }
+            
+            .profile-card { padding: 16px; }
+            
+            .profile-icon {
+                width: 50px; height: 50px; font-size: 24px; margin: 0 auto 12px;
+            }
+            
+            .profile-name { text-align: center; }
+            
+            .profile-yield { text-align: center; }
+            
+            .profile-instruments {
+                font-size: 13px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-content { padding: 12px; padding-bottom: 100px; }
+            
+            .portfolio-chart {
+                height: 240px; padding: 10px;
+            }
+            
+            .chart-label { font-size: 10px; }
+            
+            .balance-amount { font-size: 20px; }
+            
+            .btn { padding: 10px 16px; font-size: 13px; }
+            
+            .btn-small { padding: 6px 12px; font-size: 12px; }
+            
+            .stat-row {
+                flex-direction: column; gap: 4px;
+            }
+            
+            .status-badge { font-size: 11px; padding: 3px 8px; }
+        }
     </style>
 </head>
 <body>
