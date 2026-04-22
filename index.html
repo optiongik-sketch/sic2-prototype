@@ -1139,7 +1139,6 @@
 
         // Onboarding
         function showOnboarding() {
-            sessionStorage.removeItem('onboardingShown');
             onboardingSlide = 1;
             updateOnboardingSlide();
             document.getElementById('onboardingOverlay').classList.add('active');
@@ -1147,7 +1146,6 @@
 
         function closeOnboarding() {
             document.getElementById('onboardingOverlay').classList.remove('active');
-            sessionStorage.setItem('onboardingShown', 'true');
         }
 
         function goToSlide(n) {
@@ -1188,9 +1186,8 @@
             updateRedLineScale();
             initChartTooltip();
             
-            if (!sessionStorage.getItem('onboardingShown')) {
-                setTimeout(() => showOnboarding(), 500);
-            }
+            // Показывать онбординг при каждом обновлении страницы
+            showOnboarding();
         });
 
         // Chart tooltip
